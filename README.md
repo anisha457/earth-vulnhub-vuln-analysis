@@ -1,63 +1,59 @@
-# 🌍 Vulnerability Analysis of "Earth: 1" VM – VulnHub
+# 🌍 Earth VM – Vulnerability Analysis using Nessus & Nmap
 
-This repository documents a complete vulnerability assessment of the **"Earth: 1"** virtual machine, downloaded from [VulnHub](https://www.vulnhub.com/).
-
-I scanned, analyzed, and reported vulnerabilities using industry-standard tools like **Nessus**, **Nmap**, and **BurpSuite**, followed by documentation with remediation steps.
+This is a basic vulnerability analysis of the **Earth: 1 VM** from VulnHub. The goal was to identify open services, scan for vulnerabilities using **Nessus**, and manually investigate using **Nmap**.
 
 ---
 
-## 🛠 Tools Used
+## 🔧 Tools Used
 
-- 🔎 **Nessus** – Vulnerability scanning
-- 📡 **Nmap** – Port and service enumeration
-- 🧪 **BurpSuite** – Web app vulnerability testing (optional)
-- 🖥 **Earth VM** – From VulnHub (local virtual environment)
+- **Nessus** – Vulnerability Scanner
+- **Nmap** – Network & Port Scanner
+- **Earth VM** – Test machine from VulnHub
 
 ---
 
-## 🗂 Files in This Repo
+## 🧾 What This Repo Contains
 
 | File | Description |
 |------|-------------|
-| `nessus-earth-report.pdf` | Nessus scan output |
-| `nmap-earth-scan.txt` | Raw Nmap output |
-| `earth-analysis.pdf` | Final report with screenshots and vulnerability summary |
-| `screenshots/` | All scan & testing screenshots |
+| `nessus-earth-report.pdf` | Full Nessus scan |
+| `nmap-results.docx` | Scan notes and screenshots |
+| `screenshots/` | Separate saved images from the scans |
 
 ---
 
-## 📊 Summary of Findings
+## 📌 Key Vulnerabilities Identified
 
-| Vulnerability | CVE ID | Severity | Suggested Fix |
-|---------------|--------|----------|----------------|
-| Apache Path Disclosure | CVE-XXXX-XXXX | Medium | Disable directory listing |
-| SSH Weak Cipher | CVE-YYYY-YYYY | Low | Update SSH config |
-| Outdated PHP Version | CVE-ZZZZ-ZZZZ | High | Upgrade PHP |
+| Vulnerability | Tool Detected | Severity |
+|---------------|----------------|----------|
+| Outdated SSH service | Nmap | Medium |
+| Apache 2.2 with Directory Listing | Nessus | High |
+| PHP version with known CVEs | Nessus | High |
 
-*(Actual CVEs based on your findings)*
-
----
-
-## 📌 Learning Outcome
-
-- Practiced professional scanning and enumeration
-- Interpreted and validated vulnerability scan results
-- Proposed real remediation steps
-- Learned to combine Nessus + Nmap with analysis docs
+*Note: These are examples — replace with your actual findings.*
 
 ---
 
-## 👩‍💻 Author
+## 🎯 Learning Outcome
+
+- Practiced scanning a VM using Nessus
+- Performed manual enumeration with Nmap
+- Identified and interpreted real vulnerabilities
+- Improved documentation using screenshots + reporting
+
+---
+
+## 👩‍💻 About Me
 
 **Anisha Goel**  
-Cybersecurity Intern at KPMG | BTech IT Student  
+Cybersecurity Intern @ KPMG | Exploring Offensive Security  
 📧 anishagoel2007@gmail.com  
 🌐 [LinkedIn](https://www.linkedin.com/in/anisha-goel-05april2007)
 
 ---
 
-## 🔜 Future Plans
+## 🔜 Next Steps
 
-- Analyze other VulnHub VMs (e.g., Mercury, Basic Pentesting)
-- Explore Metasploit-based exploitation
-- Create a beginner guide on running Nessus + Nmap
+- Try running BurpSuite on Earth’s web port (if any)
+- Explore exploiting low-hanging CVEs manually
+- Document more VulnHub VMs in a similar format
